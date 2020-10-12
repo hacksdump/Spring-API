@@ -17,7 +17,7 @@ public class GreetingController {
     }
 
     @RequestMapping("/sum")
-    public int sum(@RequestParam(value="num1") int num1, @RequestParam(value="num2") int num2) {
+    public int sum(@RequestParam(value="num1", defaultValue="0") int num1, @RequestParam(value="num2", defaultValue="0") int num2) {
         return num1 + num2;
     }
 }
